@@ -1,0 +1,549 @@
+/* ================================================= */
+/* ARIIA 2026 - Custom Stylesheet           */
+/* ================================================= */
+
+/* 1. FONT & ROOT VARIABLES */
+/* ------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap');
+
+:root {
+  /* Fonts */
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  
+  /* Colors (Professional Deep Blue & Teal Palette) */
+  --bs-primary: #004a99;      /* Deep blue for primary actions */
+  --bs-secondary: #5a6a79;    /* Muted gray for text */
+  --bs-dark: #001c38;         /* Very dark navy for footer */
+  --bs-light: #f8f9fa;        /* Light gray for section backgrounds */
+  --bs-accent: #17a2b8;       /* Teal for accents (optional) */
+
+  /* Bootstrap Font Overrides */
+  --bs-body-font-family: var(--font-body);
+  --bs-body-font-weight: 400;
+  --bs-body-color: #343a40;
+}
+
+
+/* 2. GLOBAL STYLES */
+/* ------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* Offset for fixed navbar */
+}
+
+body {
+  padding-top: 70px; /* Match navbar height */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--bs-dark);
+}
+
+h2.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+/* Standard Section Padding */
+.section-standard {
+  padding: 6rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-standard {
+    padding: 4rem 0;
+  }
+  h2.section-title {
+    font-size: 2rem;
+  }
+}
+
+
+/* 3. COMPONENT STYLES */
+/* ------------------------------------------------- */
+
+/* --- Navbar --- */
+.navbar {
+  height: 70px;
+}
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--bs-primary);
+}
+.navbar .nav-link {
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: #495057;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: var(--bs-primary);
+}
+.navbar .btn-primary {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* --- Hero Section --- */
+.section-hero {
+  padding: 6rem 0;
+  background-color: var(--bs-light);
+  text-align: center;
+}
+.section-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--bs-dark);
+  max-width: 900px;
+  margin: 0 auto 1.5rem auto;
+}
+.section-hero .lead {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--bs-primary);
+}
+.section-hero .organizers {
+  font-size: 1rem;
+  color: var(--bs-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .section-hero {
+    padding: 4rem 0;
+  }
+  .section-hero h1 {
+    font-size: 2rem;
+  }
+  .section-hero .lead {
+    font-size: 1.25rem;
+  }
+}
+
+/* --- Countdown Section --- */
+.countdown-item {
+  text-align: center;
+}
+.countdown-number {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.countdown-label {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #adb5bd;
+}
+@media (max-width: 768px) {
+  .section-countdown {
+    padding: 3rem 0;
+  }
+  .countdown-item {
+    margin-bottom: 1.5rem;
+  }
+  .countdown-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* --- Overview Icon List --- */
+.icon-list {
+  list-style: none;
+  padding-left: 0;
+}
+.icon-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.icon-list .icon-wrap {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #e6f0ff; /* Light blue */
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--bs-primary);
+  font-size: 1.5rem;
+}
+.icon-list strong {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--bs-dark);
+}
+.icon-list p {
+  margin-bottom: 0;
+  color: var(--bs-secondary);
+}
+
+/* --- Important Date Cards --- */
+.date-card {
+  border: 2px solid #e9ecef;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  height: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+.date-card:hover {
+  border-color: var(--bs-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.07);
+}
+.date-card .date {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--bs-primary);
+  margin-bottom: 0.5rem;
+}
+.date-card .event {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--bs-dark);
+  line-height: 1.4;
+}
+
+/* --- Track Cards --- */
+.track-card {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  height: 100%;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.track-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+}
+.track-card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+.track-card h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.track-card p {
+  color: var(--bs-secondary);
+  font-size: 0.95rem;
+}
+
+/* --- Submission Requirements Cards --- */
+.req-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.req-card .icon {
+  font-size: 1.5rem;
+  color: var(--bs-accent);
+  margin-top: 0.25rem;
+}
+.req-card h6 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.req-card p {
+  font-size: 0.95rem;
+  color: var(--bs-secondary);
+  margin-bottom: 0;
+}
+
+/* --- Footer --- */
+.footer {
+  padding: 5rem 0 0 0;
+  background-color: var(--bs-dark);
+}
+.footer-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.footer-text, .footer-text p {
+  color: #adb5bd;
+  font-size: 0.95rem;
+}
+.footer-link, .footer-links a {
+  color: #ced4da;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.footer-link:hover, .footer-links a:hover {
+  color: white;
+  text-decoration: underline;
+}
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+}
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+.footer-bottom {
+  padding: 1.5rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid #343a40;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.footer-bottom small {
+  color: #adb5bd;
+  font-size: 0.85rem;
+}
+/* ===== Page Hero (shared by speakers/contact) ===== */
+.page-hero {
+  padding: 6rem 0;
+  margin-top: 70px; /* offset fixed navbar if needed */
+  background:
+    linear-gradient(135deg, rgba(0,74,153,0.92), rgba(0,28,56,0.95)),
+    url('images/hero-texture.jpg') center/cover no-repeat;
+  color: #fff;
+}
+@media (max-width: 768px){
+  .page-hero { padding: 4rem 0; }
+}
+
+/* ===== Speaker Cards ===== */
+.speaker-card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(2,6,23,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.speaker-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(2,6,23,.12);
+}
+.avatar-ring {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 12px;
+  padding: 3px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--bs-primary), #0aa2c0);
+}
+.avatar-ring .avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 999px;
+  background: #f1f5f9;
+}
+.speaker-name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--bs-dark);
+  margin-bottom: 4px;
+}
+.speaker-affil {
+  color: var(--bs-secondary);
+  font-size: 0.95rem;
+}
+
+/* ===== Contact Cards ===== */
+.contact-grid .person-card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(2,6,23,.06);
+}
+.person-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.avatar-initial {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: #e6f0ff;
+  color: var(--bs-primary);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+.person-card .name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--bs-dark);
+}
+.person-card .org {
+  font-size: 0.9rem;
+  color: var(--bs-secondary);
+}
+.contact-line {
+  display: block;
+  color: #495057;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.25rem 0;
+}
+.contact-line i {
+  color: var(--bs-primary);
+  margin-right: 8px;
+}
+.contact-line:hover { text-decoration: underline; }
+
+/* ===== Contact Boxes / Form ===== */
+.contact-box, .contact-form {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 24px rgba(2,6,23,.06);
+}
+.contact-form .form-label {
+  font-weight: 600;
+  color: var(--bs-dark);
+}
+.contact-form .btn { margin-top: 0.25rem; }
+
+
+/* =========================================
+   HERO CAROUSEL — FIXED BACKGROUND
+========================================= */
+.hero-carousel-fixed-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  min-height: 700px;
+  overflow: hidden;
+  z-index: 1; /* <-- Stays in the back */
+}
+
+.hero-carousel-fixed-bg .carousel-item {
+  height: 80vh;
+  min-height: 700px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-carousel-fixed-bg .carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 15, 50, 0), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+/* =========================================
+   SCROLLING CONTENT WRAPPER (THE FIX)
+   ========================================= */
+ 
+/* 1. Add this class to your <main> tag.
+   It will wrap ALL your scrolling page content. */
+.page-scroll-wrapper {
+  position: relative; /* Creates the stacking context */
+  z-index: 2; /* <-- Puts it ABOVE the z-index: 1 background */
+  background-color: #ffffff; /* Ensures content isn't transparent */
+}
+
+.hero-content-area {
+  /* This pushes the content down to *start* after the fixed carousel */
+  margin-top: 80vh; 
+  
+  /* Your existing styles for the content block */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Use standard section padding */
+  padding: var(--section-padding, 4rem 1rem); 
+  text-align: center;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  border-bottom: 1px solid #eee;
+}
+
+/* 3. Typography for the hero content area */
+.hero-content-area h1 {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  /* Use your global heading styles */
+  color: var(--bs-dark); 
+}
+.hero-content-area h2 {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: var(--bs-dark);
+}
+.hero-content-area h4 {
+  font-size: 1.1rem;
+  color: var(--bs-dark);
+}
+.hero-content-area p {
+  color: var(--bs-secondary); /* Use your global variable */
+  opacity: 0.95;
+}
+
+/* 4. Buttons for the hero content area */
+.hero-content-area .btn {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  padding: 0.8rem 1.8rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.hero-content-area .btn-primary {
+  /* These styles are now inherited from your global styles */
+}
+.hero-content-area .btn-outline-dark {
+  border-color: var(--bs-primary); /* Use your brand color */
+  color: var(--bs-primary);
+}
+.hero-content-area .btn-outline-dark:hover {
+  background-color: var(--bs-primary);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* 5. Responsive tweaks for the new structure */
+@media (max-width: 768px) {
+  .hero-content-area {
+    margin-top: 700px; /* Switch to min-height on mobile */
+    padding: 3rem 1rem;
+  }
+  .hero-carousel-fixed-bg {
+    height: 700px; /* Match min-height */
+  }
+  .hero-content-area h1 { font-size: 1.6rem; }
+  .hero-content-area h2 { font-size: 1.3rem; }
+  .hero-content-area .btn { font-size: 0.9rem; padding: 0.6rem 1.2rem; }
+}
