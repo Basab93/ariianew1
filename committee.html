@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Committee — ARIIA 2026</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Page-specific helpers (minimal; follows existing palette) -->
+  <style>
+    .subnav { position: sticky; top: 80px; z-index: 1020; background: #fff; border-bottom: 1px solid #e9ecef; }
+    .subnav .nav-link { font-weight: 600; letter-spacing: .02em; }
+    .committee-section { scroll-margin-top: 90px; }
+    .committee-grid { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 12px; }
+    @media (min-width: 576px){ .committee-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (min-width: 992px){ .committee-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    .committee-card { border: 1px solid #e9ecef; border-radius: 14px; padding: 14px 16px; background: #fff; box-shadow: 0 10px 24px rgba(2,6,23,.06); }
+    .committee-role { font-family: var(--font-heading); font-weight: 800; color: var(--bs-dark); }
+    .committee-item { display: flex; gap: .5rem; align-items: flex-start; }
+    .committee-item i { color: var(--bs-primary); opacity: .9; margin-top: .25rem; }
+    .committee-name { font-weight: 700; color: var(--bs-dark); }
+    .committee-affil { color: var(--bs-secondary); font-size: .95rem; }
+    .group-badge { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .04em; color: #fff; background: var(--bs-primary); padding: .25rem .6rem; border-radius: 999px; }
+    .divider { height: 1px; background: #e9ecef; margin: 2rem 0; }
+    .back-top { position: fixed; right: 18px; bottom: 18px; z-index: 1040; }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" style="z-index: 1030;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html#home"><strong>ARIIA 2026</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 bg-white">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#overview">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#dates">Dates</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#tracks">Tracks</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#venue">Venue</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#submission">Submission</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#speakers">Speakers</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Committee</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+        <a href="index.html#submission" class="btn btn-primary ms-lg-3">Submit Paper</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero text-white text-center">
+    <div class="container">
+      <h1 class="mb-2 text-white">Organizing Committee</h1>
+      <p class="opacity-75 mb-0">ARIIA 2026 • Dayananda Sagar University, Bengaluru</p>
+    </div>
+  </header>
+
+  <!-- SUB NAVIGATION -->
+  <!-- <div class="subnav">
+    <div class="container py-2">
+      <ul class="nav nav-pills gap-2 flex-wrap">
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#chief-patron">Chief Patron</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#patron">Patron</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#co-patron">Co‑Patron(s)</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#honorary-chair">Honorary Chair</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#general-chair">General Chair</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#co-general-chair">Co‑General Chair</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#tpc-chair">Technical Program Chair</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#tpc-co">TPC Co‑chairs</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#track-chair">Technical Track Chair</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#convener">Convener(s)</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#co-convener">Co‑Convener(s)</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#org-secretary">Organizing Secretary(s)</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#finance">Finance</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#publication">Publication</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#registration">Registration</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#promotion">Promotion</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#hospitality">Hospitality & Food</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#technical-sessions">Technical Sessions</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#it-support">E‑presence & IT</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-outline-primary" href="#tpc">Technical Program Committee</a></li>
+        <li class="nav-item"><a class="nav-link btn-sm btn-primary" href="#advisory">Advisory Committee</a></li>
+      </ul>
+    </div>
+  </div> -->
+
+  <!-- CONTENT -->
+  <main class="section-standard pt-4">
+    <div class="container">
+      
+      <!-- Helper to render a grid of items -->
+      <script>
+        function renderList(id, role, members){
+          const root = document.getElementById(id);
+          if(!root) return;
+          root.innerHTML = `
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h2 class="section-title h3 mb-0 committee-role">${role}</h2>
+              <span class="group-badge">${members.length} members</span>
+            </div>
+            <div class="committee-grid">${members.map(m => `
+              <div class=\"committee-card\">
+                <div class=\"committee-item\">
+                  <i class=\"bi bi-person-badge\"></i>
+                  <div>
+                    <div class=\"committee-name\">${m.name}</div>
+                    ${m.affil ? `<div class=\"committee-affil\">${m.affil}</div>` : ''}
+                  </div>
+                </div>
+              </div>`).join('')}</div>`;
+        }
+      </script>
+
+      <!-- Sections (containers) -->
+      <section id="chief-patron" class="committee-section mb-5"></section>
+      <section id="patron" class="committee-section mb-5"></section>
+      <section id="co-patron" class="committee-section mb-5"></section>
+      <section id="honorary-chair" class="committee-section mb-5"></section>
+      <section id="general-chair" class="committee-section mb-5"></section>
+      <section id="co-general-chair" class="committee-section mb-5"></section>
+      <section id="tpc-chair" class="committee-section mb-5"></section>
+      <section id="tpc-co" class="committee-section mb-5"></section>
+      <section id="track-chair" class="committee-section mb-5"></section>
+      <section id="convener" class="committee-section mb-5"></section>
+      <section id="co-convener" class="committee-section mb-5"></section>
+      <section id="org-secretary" class="committee-section mb-5"></section>
+      <section id="finance" class="committee-section mb-5"></section>
+      <section id="publication" class="committee-section mb-5"></section>
+      <section id="registration" class="committee-section mb-5"></section>
+      <section id="promotion" class="committee-section mb-5"></section>
+      <section id="hospitality" class="committee-section mb-5"></section>
+      <section id="technical-sessions" class="committee-section mb-5"></section>
+      <section id="it-support" class="committee-section mb-5"></section>
+      <section id="tpc" class="committee-section mb-5"></section>
+
+      <div class="divider"></div>
+
+      <!-- Advisory AT THE END (as requested) -->
+      <section id="advisory" class="committee-section mb-3"></section>
+      <p class="text-muted">*Advisory Committee listed at the end as requested.</p>
+    </div>
+  </main>
+
+  <!-- FOOTER (reuse site footer styles) -->
+  <footer id="footer" class="footer page-hero text-white mb-0 pb-0">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <h5 class="footer-heading">About ARIIA-2026</h5>
+          <p class="footer-text">The International Conference on Augmented Reality, Intelligent Systems, and Industrial Automation (ARIIA-2026) is organised by the Department of Computer Science and Engineering (AI & ML), Dayananda Sagar University.</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#overview">About</a></li>
+            <li><a href="index.html#dates">Dates</a></li>
+            <li><a href="index.html#tracks">Tracks</a></li>
+            <li><a href="index.html#submission">Submission</a></li>
+            <li><a href="index.html#speakers">Speakers</a></li>
+            <li><a class="text-white" href="committee.html">Committee</a></li>
+            <li><a href="#">Publication</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-heading">Contact Us</h5>
+          <p class="footer-text"><strong>Convener, ARIIA-2026</strong><br> Dayananda Sagar University, Kanakapura Road, Bengaluru, India.</p>
+          <p class="footer-text">Email: <a href="mailto:ariia@dsu.edu.in" class="footer-link">ariia@dsu.edu.in</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6"><small>© 2026 ARIIA — All Rights Reserved.</small></div>
+          <div class="col-md-6 text-md-end"><small>Designed and developed by Dr. Basab Nath et. al.</small></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="btn btn-primary back-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- DATA (from your message) -->
+  <script>
+    const data = {
+      chiefPatron: [
+        {name: 'Dr. D. Hemachandra Sagar', affil: 'Chancellor, DSU, Bengaluru, India'},
+        {name: 'Dr. D. Premchandra Sagar', affil: 'Pro-Chancellor, DSU, Bengaluru, India'},
+        {name: 'Dr. Ranjan Pai', affil: 'MAHE, Manipal, India'},
+        {name: 'S. Vaitheeswaran', affil: 'Chairperson, Manipal University Jaipur, India'},
+      ],
+      patron: [
+        {name: 'Dr. B. S. Satyanarayana', affil: 'Vice-Chancellor, DSU, Bengaluru, India'},
+        {name: 'Dr. Prakash S.', affil: 'Pro‑Vice Chancellor, DSU, Bengaluru, India'},
+        {name: 'Dr. H. S. Ballal', affil: 'Pro Chancellor, MAHE, Manipal, India'},
+        {name: 'Dr. M. D. Venkatesh', affil: 'Vice‑Chancellor, MAHE, Manipal, India'},
+        {name: 'Dr. Narayana Sabhahit', affil: 'Pro Vice Chancellor, MAHE, Manipal, India'},
+        {name: 'Dr. NN Sharma', affil: 'President, Manipal University Jaipur, India'},
+        {name: 'Dr. Karunakar Kotegar', affil: 'Pro President, Manipal University Jaipur, India'},
+      ],
+      coPatron: [
+        {name: 'Dr. Puttamadappa C', affil: 'Registrar, DSU, Bengaluru, India'},
+        {name: 'Dr. Udaya Kumar Reddy', affil: 'Dean SoE, DSU, Bengaluru, India'},
+        {name: 'Dr Sudarshan TSB', affil: 'Dean, Research, DSU, Bengaluru, India'},
+        {name: 'Dr. P. Giridhar Kini', affil: 'Registrar, MAHE, Manipal, India'},
+        {name: 'Dr. Amit Soni', affil: 'Registrar, Manipal University Jaipur, India'},
+        {name: 'Dr. Kuldip Sangwan', affil: 'Dean (FoE), Manipal University Jaipur, India'},
+      ],
+      honoraryChair: [
+        {name: 'Dr. Jayavrinda Vrindavanam V', affil: 'Professor & Chairperson, CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Arun Balodi', affil: 'Chairman & Professor, DSU, Bengaluru, India'},
+        {name: 'Dr. Anil Rana', affil: 'Director, MIT, MAHE, Manipal, India'},
+      ],
+      generalChair: [
+        {name: 'Dr. Dilip Kumar', affil: 'Associate Professor & Chairperson (CyberSecurity), DSU, Bengaluru, India'},
+        {name: 'Dr. Girisha G S', affil: 'Professor & Chairperson (CSE), DSU, Bengaluru, India'},
+        {name: 'Dr. O. P. Vyas', affil: 'Dean Technology Development, IIIT Allahabad, India'},
+        {name: 'Dr. Ts. Sellappan Palaniappan', affil: 'Malaysia University of Science and Technology, Malaysia'},
+      ],
+      coGeneralChair: [
+        {name: 'Dr. Poongodi T', affil: 'Professor & Chairperson, CSE (AI & DS), DSU, Bengaluru, India'},
+        {name: 'Dr. Pramod Kumar Naik', affil: 'Chairman & Associate Professor, AI and Robotics Engineering, DSU, Bengaluru, India'},
+        {name: 'Dr. Shaila S. G.', affil: 'Professor & Chairperson, CSE (Data Science), DSU, Bengaluru, India'},
+        {name: 'Dr. Saravana Bavan. D', affil: 'Associate Professor, Mechanical Engineering, DSU, Bengaluru, India'},
+        {name: 'Dr. M Shahina Parveen', affil: 'Professor & Chairperson, Computer Science and Technology, DSU, Bengaluru, India'},
+        {name: 'Dr. Nagaraja S. R', affil: 'Professor & Chairman, Aerospace Engineering, DSU, Bengaluru, India'},
+      ],
+      tpcChair: [
+        {name: 'Dr. Hanumanth Sastry Sistla', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Bahubali Shiragapur', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Dayal R Parhi', affil: 'ME Department, NIT Rourkela, India'},
+        {name: 'Dr. Amit Dwivedi', affil: 'University of Warwick, UK'},
+        {name: 'Dr. Lalit Garg', affil: 'University of Malta, Malta'},
+        {name: 'Dr. Ryu Jee‑Youl', affil: 'Pukyong National University, South Korea'},
+        {name: 'Dr. S.K. Patra', affil: 'NIT Agartala, Director, India'},
+      ],
+      tpcCo: [
+        {name: 'Dr. Sachi Nandan Mohanty', affil: 'VIT‑AP University, Andhra Pradesh, India'},
+        {name: 'Dr. Georgios Tsaramirsis', affil: 'University of Wollongong, Dubai, UAE'},
+        {name: 'Dr. Ketan Kotecha', affil: 'Symbiosis Institute of Technology, Pune, India'},
+        {name: 'Dr. Rachit Garg', affil: 'Lovely Professional University, Punjab, India'},
+      ],
+      trackChair: [
+        {name: 'Dr. Joshuva Arockia Dhanraj', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Vinutha', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Sellappan Palaniappan', affil: 'Malaysia University of Science and Technology, Malaysia'},
+        {name: 'Prof. O.P. Vyas', affil: 'IIIT Allahabad, India'},
+        {name: 'Prof. Ryu Jee‑Youl', affil: 'Pukyong National University, South Korea'},
+        {name: 'Prof. S.K. Patra', affil: 'NIT Agartala, India'},
+      ],
+      convener: [
+        {name: 'Dr. Jitendra Kumar Jaiswal', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Princy Randhawa', affil: 'CSE (AI & ML), DSU, Bengaluru, India (IEEE 94052618)'},
+        {name: 'Dr. Nithesh Naik', affil: 'Manipal Institute of Technology, MAHE, Manipal, India'},
+        {name: 'Dr. Krishna Kant Pandey', affil: 'Manipal University Jaipur, Jaipur, India (IEEE 93092373)'},
+      ],
+      coConvener: [
+        {name: 'Dr. Abdul Haq Nalband', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Prateek Verma', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Sugandha Saxena', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Vinod Yadav', affil: 'Manipal University Jaipur, India'},
+        {name: 'Dr. Suhas Kowshik', affil: 'Manipal Institute of Technology, MAHE, Manipal, India'},
+      ],
+      orgSecretary: [
+        {name: 'Dr. Joshuva Arockia Dhanraj', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Pawan Hiremath', affil: 'Manipal Institute of Technology, MAHE, Manipal, India'},
+        {name: 'Dr. Prabhat Dixit', affil: 'Manipal University Jaipur, India'},
+        {name: 'Dr. Basab Nath', affil: 'Bennett University, Greater Noida, India'},
+      ],
+      finance: [
+        {name: 'Dr. Jitendra Kumar Jaiswal', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Vegi', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Bhuvana Mohini', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof. Shivnandan Roy', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+      ],
+      publication: [
+        {name: 'Dr Suresh', affil: 'Professor of Practice, DSU, Bengaluru, India'},
+        {name: 'Dr Joshuva Arockia Dhanraj', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Prateek Varma', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Govind Kumar Pandey', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Mude Nagarjuna Naik', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Subhash Mondal', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Lakshmanan', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Sumit Kumar Yadav', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Trupthi Rao', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Nithesh Naik', affil: 'Manipal Institute of Technology, MAHE, Manipal'},
+      ],
+      registration: [
+        {name: 'Prof Soheli', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Amrita Kundu', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Rakshitha', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Mitha Guru', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Nivetha', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Bhuvana Mohini', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Anubrata Singharoy', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Pragnya Mishra', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof. Verriboina Antony', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Tejal Rohidas Khade', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+      ],
+      promotion: [
+        {name: 'Prof Sriram Kumar', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Mude Nagarjuna Naik', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Sahil Pocker', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof S V K R Rajeswari', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Princy Randhawa', affil: 'CSE (AI & ML), DSU, Bengaluru, India (IEEE 94052618)'},
+        {name: 'Dr. Sugandha Saxena', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Georgios Tsaramirsis', affil: 'University of Wollongong, UAE'},
+        {name: 'Dr. Vijay Prakash', affil: 'University of Malta'},
+        {name: 'Dr. Bhaskar Somani', affil: 'University of Southampton, UK'},
+        {name: 'Dr. Harikrishna Ramaiah', affil: 'University of Malaya, Malaysia'},
+        {name: 'Dr. Sarvesh Kumar', affil: 'ICFAI University, Jaipur, India'},
+        {name: 'Dr. Izzat Aldarraji', affil: 'University of Baghdad, Iraq'},
+      ],
+      hospitality: [
+        {name: 'Prof Pradeep Kumar K', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Partha Protim Sen', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Tejal Rohidas Khade', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Hairunesa Beevi', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+      ],
+      technicalSessions: [
+        {name: 'Prof Pradeep Kumar K', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Sriram Kumar', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof S V K R Rajeswari', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Dr. Mude Nagarjuna Naik', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+      ],
+      itSupport: [
+        {name: 'Dr. Lakshmanan M', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+        {name: 'Prof Partha Protim Sen', affil: 'CSE (AI & ML), DSU, Bengaluru, India'},
+      ],
+      tpc: [
+        {name: 'Dr. Aryalekshmi B.N', affil: 'Associate Professor, Dept. of ECE, HKBK College of Engineering, Bengaluru, India'},
+        {name: 'Dr Sapna Kumari C', affil: 'Associate Professor, Sapthagiri NPS University, Bengaluru, India'},
+        {name: 'Ashwini Kodipalli', affil: 'Professor & Program Director, SOE (CSE), DSU, Bengaluru, India'},
+        {name: 'Dr. Shridhar B. Devamane', affil: 'Dean (R&D), CSE, MS Engineering College, Bengaluru, India'},
+        {name: 'Dr. Kavita V. Horadi', affil: 'BNMIT, Bengaluru, India'},
+      ],
+      advisory: [
+        {name: 'Dr. Mark Leeson', affil: 'University of Warwick, UK'},
+        {name: 'Dr. Prasad Ponnapalli', affil: 'Manchester Metropolitan University, UK'},
+        {name: 'Dr. Xiang Zhang', affil: 'Manchester Metropolitan University, UK'},
+        {name: 'Dr. Bo Ye', affil: 'Hubei Engineering, China'},
+        {name: 'Dr. He Li', affil: 'Southeast University, China'},
+        {name: 'Dr. Rupak Kharel', affil: 'University of Huddersfield, UK'},
+        {name: 'Dr. Sally McClean', affil: 'Ulster University, UK'},
+        {name: 'Dr. Vijay Prakash', affil: 'University of Malta, EU'},
+        {name: 'Dr. Varadraj Gurupur', affil: 'University of Central Florida, USA'},
+        {name: 'Dr. Raj Mani Shukla', affil: 'Anglia Russell University, UK'},
+        {name: 'Dr. Peter Albert Xuereb', affil: 'University of Malta, EU'},
+        {name: 'Dr. Haiming Liu', affil: 'University of Southampton, UK'},
+        {name: 'Dr. Arun Kumar Singh', affil: 'PNG University of Technology, Papua New Guinea'},
+        {name: 'Dr. Georgios Tsaramirsis', affil: 'University of Wollongong, UAE'},
+        {name: 'Dr. Nazean Binti Jomhari', affil: 'Universiti Malaya, Malaysia'},
+        {name: 'Dr. Divya Prakash Shrivastava', affil: 'Higher Colleges of Technology, Dubai‑UAE'},
+        {name: 'Dr. Chaman Verma', affil: 'University of Eötvös Loránd, Hungary'},
+        {name: 'Dr. Mustafa Muwafak Alobaedy', affil: 'City University, Malaysia'},
+        {name: 'Dr. M Kazem Chamran', affil: 'City University, Malaysia'},
+        {name: 'Dr. Abdulalem Ali', affil: 'City University, Malaysia'},
+        {name: 'Dr. Alireza Mohammadi', affil: 'City University, Malaysia'},
+        {name: 'Dr. Subha A/P Bhassu', affil: 'Universiti Malaya, Malaysia'},
+        {name: 'Dr. Zhanhu Guo', affil: 'Northumbria University, UK'},
+        {name: 'Dr. Bhaskar Somani', affil: 'University of Southampton, UK'},
+        {name: 'Dr. Harkrishan Ramaiah', affil: 'Senior Member, IEEE 90851746; Universiti Malaya, Malaysia'},
+        {name: 'Dr. Antony V Samrot', affil: 'Manipal University College Malaysia, Malaysia'},
+        {name: 'Dr. Dayal R Parhi', affil: 'ME Department, NIT Rourkela, India'},
+        {name: 'Dr. Prases Kumar Mohanty', affil: 'NIT Arunachal Pradesh, India'},
+        {name: 'Dr. Shweta Agarwala', affil: 'Professor & Associate Dean, SEAS, Ahmedabad University, Gujarat, India'},
+        {name: 'Prof. Ashitava Ghosal', affil: 'Professor & Senior Associate Dean, Ahmedabad University, Gujarat, India'},
+        {name: 'Dr. Mehul S Raval', affil: 'Professor, Ahmedabad University, Gujarat, India'},
+      ],
+    };
+
+    // Render all groups
+    document.addEventListener('DOMContentLoaded', () => {
+      renderList('chief-patron', 'Chief Patron', data.chiefPatron);
+      renderList('patron', 'Patron', data.patron);
+      renderList('co-patron', 'Co‑Patron(s)', data.coPatron);
+      renderList('honorary-chair', 'Honorary Chair', data.honoraryChair);
+      renderList('general-chair', 'General Chair', data.generalChair);
+      renderList('co-general-chair', 'Co‑General Chair', data.coGeneralChair);
+      renderList('tpc-chair', 'Technical Program Chair', data.tpcChair);
+      renderList('tpc-co', 'Technical Program Committee Co‑chairs', data.tpcCo);
+      renderList('track-chair', 'Technical Track Chair', data.trackChair);
+      renderList('convener', 'Convener(s)', data.convener);
+      renderList('co-convener', 'Co‑Convener(s)', data.coConvener);
+      renderList('org-secretary', 'Organizing Secretary(s)', data.orgSecretary);
+      renderList('finance', 'Finance Committee', data.finance);
+      renderList('publication', 'Publication Committee', data.publication);
+      renderList('registration', 'Registration Committee', data.registration);
+      renderList('promotion', 'Promotion Committee', data.promotion);
+      renderList('hospitality', 'Hospitality & Food Committee', data.hospitality);
+      renderList('technical-sessions', 'Technical Sessions Committee', data.technicalSessions);
+      renderList('it-support', 'E‑presence, Website & Informatics Support', data.itSupport);
+      renderList('tpc', 'Technical Program Committee', data.tpc);
+      renderList('advisory', 'Advisory Committee', data.advisory);
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
