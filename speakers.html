@@ -22,7 +22,7 @@
     header.masthead h1 { font-size: 2.5rem; }
     @media (min-width: 992px){ header.masthead h1{ font-size: 3.25rem; } }
 
-    /* Speakers section – dark canvas like the reference */
+   
   .speakers-wrap {
   background-color: #fff;
   color: #212529;
@@ -30,9 +30,11 @@
   padding-bottom: 3rem;
 }
 
+
 .speakers-wrap .container {
-  max-width: 1040px;   /* ⬅️ makes layout less zoomed-in */
+  max-width: 980px;   
 }
+
 
 
     .speakers-kicker {
@@ -51,7 +53,6 @@
     }
     .speakers-title .accent { color: var(--bs-primary); }
 
-    /* Card layout mimicking the pattern */
     .speaker-card {
       background: #1a1a1a;
       border: 1px solid rgba(255,255,255,.06);
@@ -62,7 +63,7 @@
     .speaker-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 28px rgba(0,0,0,.45);
-      border-color: rgba(13,110,253,.35); /* bs-primary */
+      border-color: rgba(13,110,253,.35); 
     }
     .speaker-photo {
       width: 100%;
@@ -92,7 +93,7 @@
 </head>
 
 <body id="page-top">
-  <!-- Navbar (consistent) -->
+  
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container px-4 px-lg-5">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="ARIIA Conference Home">
@@ -129,7 +130,7 @@
     </div>
   </header>
 
-  <!-- Speakers Grid (patterned like screenshot, dark surface) -->
+ 
   <section class="speakers-wrap">
     <div class="container px-4 px-lg-5">
       <div class="row align-items-start g-4 g-lg-5 mb-4">
@@ -148,7 +149,7 @@
 
       <div class="row g-grid">
         <!-- Card 1 -->
-        <div class="col-md-6">
+       <div class="col-12 col-sm-6 col-lg-4">
           <article class="speaker-card">
             <img class="speaker-photo" src="assets/img/amit.jfif" alt="Portrait of Dr. Amit Dwivedi">
             <div class="speaker-meta">
@@ -159,7 +160,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="col-md-6">
+        <div class="col-12 col-sm-6 col-lg-4">
           <article class="speaker-card">
             <img class="speaker-photo" src="assets/img/lalit.jpeg" alt="Portrait of Dr. Lalit Garg">
             <div class="speaker-meta">
@@ -170,7 +171,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="col-md-6">
+        <div class="col-12 col-sm-6 col-lg-4">
           <article class="speaker-card">
             <img class="speaker-photo" src="assets/img/Mayukh Das.jpeg" alt="Portrait of Mayukh Das S">
             <div class="speaker-meta">
@@ -181,7 +182,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="col-md-6">
+      <div class="col-12 col-sm-6 col-lg-4">
           <article class="speaker-card">
             <img class="speaker-photo" src="assets/img/Dr. Harikrishnan A.L. Ramiah.jpeg" alt="Portrait of Dr. Harikrishnan Ramaiah">
             <div class="speaker-meta">
@@ -192,7 +193,7 @@
         </div>
 
         <!-- Card 5 -->
-        <div class="col-md-6">
+       <div class="col-12 col-sm-6 col-lg-4">
           <article class="speaker-card">
             <img class="speaker-photo" src="assets/img/ketan.png" alt="Portrait of Dr. Ketan Kotecha">
             <div class="speaker-meta">
@@ -210,6 +211,6 @@
     </div>
   </footer>
 
-  <!-- Scripts (keeps navbar shrink/scroll behavior consistent) -->
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/lib
