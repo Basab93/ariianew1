@@ -42,6 +42,39 @@
     .gallery-item:hover {
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
     }
+
+     /* Dropdown fix (works without Bootstrap JS) */
+.navbar-nav .dropdown {
+  position: relative;
+}
+
+.navbar-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  padding: 10px 0;
+  min-width: 200px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
   </style>
 </head>
 
@@ -57,18 +90,46 @@
         data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ms-auto my-2 my-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#venue">Venue</a></li>
-          <li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
-          <li class="nav-item"><a class="nav-link" href="tracks.html">Tracks</a></li>
-          <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
-          <li class="nav-item"><a class="nav-link" href="publication.html">Publication</a></li>
-          <li class="nav-item"><a class="nav-link" href="submission.html">Submission</a></li>
-          <li class="nav-item"><a class="nav-link" href="register.html">Registration</a></li>
-          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-        </ul>
+         <ul class="navbar-nav ms-auto my-2 my-lg-0">
+
+  <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+  <li class="nav-item"><a class="nav-link" href="index.html#venue">Venue</a></li>
+  <li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
+
+  <!-- Program -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#">Program</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="tracks.html">Tracks</a></li>
+      <li><a class="dropdown-item" href="speakers.html">Speakers</a></li>
+    </ul>
+  </li>
+
+  <!-- Authors -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#">Authors</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="submission.html">Submission</a></li>
+      <li><a class="dropdown-item" href="publication.html">Publication</a></li>
+
+    </ul>
+  </li>
+
+  <!-- Calls -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#">Calls</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="session_proposal.html">Call for Special Sessions</a></li>
+      <li><a class="dropdown-item" href="reviewers.html">Call for Reviewers</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-item"><a class="nav-link" href="register.html">Registration</a></li>
+  <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Gallery 2024</a></li>
+  <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+  <li class="nav-item"><a class="nav-link" href="Sponsorship.html">Sponsorship</a></li>
+
+</ul>
       </div>
     </div>
   </nav>

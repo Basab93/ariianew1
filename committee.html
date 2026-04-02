@@ -21,6 +21,39 @@
     @media (min-width: 992px) {
       header.masthead h1 { font-size: 3.5rem; }
     }
+
+     /* Dropdown fix (works without Bootstrap JS) */
+.navbar-nav .dropdown {
+  position: relative;
+}
+
+.navbar-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  padding: 10px 0;
+  min-width: 200px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
   </style>
 </head>
 
@@ -36,20 +69,46 @@
         data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ms-auto my-2 my-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#venue">Venue</a></li>
-          <li class="nav-item"><a class="nav-link active" href="committee.html">Committee</a></li>
-          <li class="nav-item"><a class="nav-link" href="tracks.html">Tracks</a></li>
-          <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
-          
+         <ul class="navbar-nav ms-auto my-2 my-lg-0">
 
-           <li class="nav-item"><a class="nav-link" href="publication.html">Publication</a></li>
-          <li class="nav-item"><a class="nav-link" href="submission.html">Submission</a></li>
-            <li class="nav-item"><a class="nav-link" href="register.html">Registration</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Gallery&nbsp;2024</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-        </ul>
+  <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+  <li class="nav-item"><a class="nav-link" href="index.html#venue">Venue</a></li>
+  <li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
+
+  <!-- Program -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#">Program</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="tracks.html">Tracks</a></li>
+      <li><a class="dropdown-item" href="speakers.html">Speakers</a></li>
+    </ul>
+  </li>
+
+  <!-- Authors -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#">Authors</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="submission.html">Submission</a></li>
+      <li><a class="dropdown-item" href="publication.html">Publication</a></li>
+
+    </ul>
+  </li>
+
+  <!-- Calls -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#">Calls</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="session_proposal.html">Call for Special Sessions</a></li>
+      <li><a class="dropdown-item" href="reviewers.html">Call for Reviewers</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-item"><a class="nav-link" href="register.html">Registration</a></li>
+  <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Gallery 2024</a></li>
+  <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+  <li class="nav-item"><a class="nav-link" href="Sponsorship.html">Sponsorship</a></li>
+
+</ul>
       </div>
     </div>
   </nav>
@@ -173,11 +232,12 @@
       <!-- Co-Convener(s) -->
       <h3 class="fw-bold text-primary mt-4">Co-Convener(s)</h3>
       <ul class="text-muted">
-        <li>Dr. Abdul Haq Nalband — CSE (AI & ML), DSU, Bengaluru, India</li>
+        
         <li>Dr. Prateek Verma — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Dr. Sugandha Saxena — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Dr. Vinod Yadav — Manipal University Jaipur, India</li>
         <li>Dr. Suhas Kowshik — Manipal Institute of Technology, MAHE, Manipal, India</li>
+        <li>Dr. Biswa Mohan Sahoo — CSE (AI & ML), DSU, Bengaluru, India</li>
       </ul>
 
       <!-- Organizing Secretary(s) -->
@@ -206,7 +266,7 @@
         <li>Dr. Prateek Varma — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Prof Govind Kumar Pandey — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Dr. Mude Nagarjuna Naik — CSE (AI & ML), DSU, Bengaluru, India</li>
-        <li>Prof Subhash Mondal — CSE (AI & ML), DSU, Bengaluru, India</li>
+        <li>Dr. Sumant Kumar Mohapatra — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Dr. Lakshmanan — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Dr. Sumit Kumar Yadav — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Prof Trupthi Rao — CSE (AI & ML), DSU, Bengaluru, India</li>
@@ -226,6 +286,10 @@
         <li>Prof Pragnya Mishra — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Prof. Verriboina Antony — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Prof. Tejal Rohidas Khade — CSE (AI & ML), DSU, Bengaluru, India</li>
+        <li>Prof. Upasana Sahil — CSE (AI & ML), DSU, Bengaluru, India</li>
+        <li>Prof. Ripunjay Jaiswar — CSE (AI & ML), DSU, Bengaluru, India</li>
+        <li>Prof. Kaviyaadharshani D — CSE (AI & ML), DSU, Bengaluru, India</li>
+
       </ul>
 
       <!-- Promotion Committee -->
@@ -234,7 +298,7 @@
         <li>Prof Sriram Kumar — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Dr, Dr. Mude Nagarjuna Naik — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Prof Sahil Pocker — CSE (AI & ML), DSU, Bengaluru, India</li>
-        <li>Prof S V K R Rajeswari — CSE (AI & ML), DSU, Bengaluru, India</li>
+        <li>Prof. Ayushi Agarwal-CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Dr. Princy Randhawa — CSE (AI & ML), DSU, Bengaluru, India (IEEE 94052618)</li>
         <li>Dr. Sugandha Saxena — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Dr. Georgios Tsaramirsis — University of Wollongong, UAE</li>
@@ -245,6 +309,16 @@
         <li>Dr. Izzat Aldarraji — University of Baghdad, Iraq</li>
       </ul>
 
+      <!-- Sponsorship Committee -->
+<h3 class="fw-bold text-primary mt-4">Sponsorship Committee</h3>
+<ul class="text-muted">
+  <li>Dr. A Nippun Kumar — CSE (AI & ML), DSU, Bengaluru, India</li>
+  <li>Dr. Amritha Abdul Salam — CSE (AI & ML), DSU, Bengaluru, India</li>
+  <li>Dr. Manimaran M — CSE (AI & ML), DSU, Bengaluru, India</li>
+  <li>Dr. Ankita Thakkar — CSE (AI & ML), DSU, Bengaluru, India</li>
+  <li>Dr. Manikandan — CSE (AI & ML), DSU, Bengaluru, India</li>
+</ul>
+
       <!-- Hospitality and Food Committee -->
       <h3 class="fw-bold text-primary mt-4">Hospitality and Food Committee</h3>
       <ul class="text-muted">
@@ -252,6 +326,9 @@
         <li>Prof Partha Protim Sen — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Prof. Tejal Rohidas Khade — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Prof. Hairunesa Beevi — CSE (AI & ML), DSU, Bengaluru, India</li>
+        <li>Prof. Sharada A — CSE (AI & ML), DSU, Bengaluru, India</li>
+        <li>Prof. Ram Vikash — CSE (AI & ML), DSU, Bengaluru, India</li>
+
       </ul>
 
       <!-- Technical Sessions Committee -->
@@ -261,6 +338,8 @@
         <li>Prof Sriram Kumar — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Prof S V K R Rajeswari — CSE (AI & ML), DSU, Bengaluru, India</li>
         <li>Dr, Dr. Mude Nagarjuna Naik — CSE (AI & ML), DSU, Bengaluru, India</li>
+        <li>Prof. Kuna Srinidhi — CSE (AI & ML), DSU, Bengaluru, India</li>
+        <li>Prof. Souvik Ghosh — CSE (AI & ML), DSU, Bengaluru, India</li>
       </ul>
 
       <!-- E-presence, Website and Informatics Support -->
@@ -279,42 +358,54 @@
         <li>Dr. Shridhar B. Devamane — Dean (R&amp;D), Computer Science and Engineering, MS Engineering College, Bengaluru, India</li>
         <li>Dr. Kavita V. Horadi — BNMIT, Bengaluru, India</li>
       </ul>
+<!-- Advisory Committee (keep last) -->
+<h3 class="fw-bold text-primary mt-4">Advisory Committee</h3>
+<ul class="text-muted">
+<li>Dr. Rashad Abaszade — Associate Professor, Turan International Research Institute, Baku, Azerbaijan</li>
+<li>Dr. Mark Leeson — University of Warwick, UK</li>
+  <li>Dr. Georgios Tsaramirsis — University of Wollongong, UAE</li>
+  <li>Dr. Subha A/P Bhassu — Universiti Malaya, Malaysia</li>
+  <li>Dr. Zhanhu Guo — Northumbria University, UK</li>
+  <li>Dr. Bhaskar Somani — University of Southampton, UK</li>
+  <li>Dr. Harkrishan Ramaiah (Senior Member, IEEE 90851746) — Universiti Malaya, Malaysia</li>
+  <li>Dr. Antony V Samrot — Manipal University College Malaysia, Malaysia</li>
+  <li>Dr. Dayal R Parhi — ME Department, NIT Rourkela, India</li>
+  <li>Dr. Prases Kumar Mohanty — NIT Arunachal Pradesh, India</li>
+  <li>Dr. Shweta Agarwala — Professor & Associate Dean, School of Engineering and Applied Science, Ahmedabad University, Gujarat, India</li>
+  <li>Prof. Ashitava Ghosal — Professor & Senior Associate Dean, Ahmedabad University, Gujarat, India</li>
+  <li>Dr. Mehul S Raval — Professor, Ahmedabad University, Gujarat, India</li>
 
-      <!-- Advisory Committee (keep last) -->
-      <h3 class="fw-bold text-primary mt-4">Advisory Committee</h3>
-      <ul class="text-muted">
-        <li>Dr. Mark Leeson — University of Warwick, UK</li>
-        <li>Dr. Prasad Ponnapalli — Manchester Metropolitan University, UK</li>
-        <li>Dr. Xiang Zhang — Manchester Metropolitan University, UK</li>
-        <li>Dr. Bo Ye — Hubei Engineering, China</li>
-        <li>Dr. He Li — Southeast University, China</li>
-        <li>Dr. Rupak Kharel — University of Huddersfield, UK</li>
-        <li>Dr. Sally McClean — Ulster University, UK</li>
-        <li>Dr. Vijay Prakash — University of Malta, EU</li>
-        <li>Dr. Varadraj Gurupur — University of Central Florida, USA</li>
-        <li>Dr. Raj Mani Shukla — Anglia Russell University, UK</li>
-        <li>Dr. Peter Albert Xuereb — University of Malta, EU</li>
-        <li>Dr. Haiming Liu — University of Southampton, UK</li>
-        <li>Dr. Arun Kumar Singh — PNG University of Technology, Papua New Guinea</li>
-        <li>Dr. Georgios Tsaramirsis — University of Wollongong, UAE</li>
-        <li>Dr. Nazean Binti Jomhari — Universiti Malaya, Malaysia</li>
-        <li>Dr. Divya Prakash Shrivastava — Higher Colleges of Technology, Dubai-UAE</li>
-        <li>Dr. Chaman Verma — University of Eötvös Loránd, Hungary</li>
-        <li>Dr. Mustafa Muwafak Alobaedy — City University, Malaysia</li>
-        <li>Dr. M Kazem Chamran — City University, Malaysia</li>
-        <li>Dr. Abdulalem Ali — City University, Malaysia</li>
-        <li>Dr. Alireza Mohammadi — City University, Malaysia</li>
-        <li>Dr. Subha A/P Bhassu — Universiti Malaya, Malaysia</li>
-        <li>Dr. Zhanhu Guo — Northumbria University, UK</li>
-        <li>Dr. Bhaskar Somani — University of Southampton, UK</li>
-        <li>Dr. Harkrishan Ramaiah (Senior Member, IEEE 90851746) — Universiti Malaya, Malaysia</li>
-        <li>Dr. Antony V Samrot — Manipal University College Malaysia, Malaysia</li>
-        <li>Dr. Dayal R Parhi — ME Department, NIT Rourkela, India</li>
-        <li>Dr. Prases Kumar Mohanty — NIT Arunachal Pradesh, India</li>
-        <li>Dr. Shweta Agarwala — Professor & Associate Dean, School of Engineering and Applied Science, Ahmedabad University, Gujarat, India</li>
-        <li>Prof. Ashitava Ghosal — Professor & Senior Associate Dean, Ahmedabad University, Gujarat, India</li>
-        <li>Dr. Mehul S Raval — Professor, Ahmedabad University, Gujarat, India</li>
-      </ul>
+  <!-- Added Members -->
+  <li>Dr. B. Sridhar Babu — Dean – R&D, Malla Reddy (MR) Deemed University, Telangana, India</li>
+  <li>Dr. Shilpa Bade-Gite — Dr. D. Y. Patil School of Science & Technology, Pune, India</li>
+  <li>Dr. Loveleen Gaur — The University of the South Pacific, Fiji</li>
+  <li>Prof. Dr. Regiane Relva Romano — Facens & VIP-Systems, São Paulo, Brazil</li>
+  <li>Dr. Sultan Ahmad — Prince Sattam Bin Abdulaziz University, Al Kharj, Saudi Arabia</li>
+  <li>Dr. Neyara Radwan — Liwa University, Abu Dhabi, UAE</li>
+  <li>Prof. Dr. Valliappan Raju — GISMA University of Applied Sciences, Germany</li>
+  <li>Assoc. Prof. Dr. Bui Thanh Khoa — Vice Dean, Industrial University of Ho Chi Minh City, Vietnam</li>
+  <li>Assoc. Prof. Dr. Phan Hong Hai — Rector, Industrial University of Ho Chi Minh City, Vietnam</li>
+  <li>Dr. Phan Tran Minh Khue — Ho Chi Minh City University of Technology (VNU-HCM), Vietnam</li>
+  <li>Dr. Shamim Akhter — California State University, San Bernardino, USA</li>
+  <li>Dr. Sungho Kim — Pacific States University, USA</li>
+  <li>Dr. Roise Uddin — Pacific States University, USA</li>
+  <li>Prof. (Dr.) Ketan Kotecha — Symbiosis Institute of Technology, Pune, India</li>
+  <li>Dr. Chai Ching Tan — NIDA, Bangkok, Thailand & Asia e-University, Malaysia</li>
+  <li>Dr. Hind Hammouch — University Sidi Mohamed Ben Abdellah, Fez, Morocco</li>
+  <li>Mr. Aasik Abulcassim — Head, Department of IT, Hardy ATI (SLIATE), Sri Lanka</li>
+  <li>Ms. Anahita Ghanad — Veritas University College, Kuala Lumpur, Malaysia</li>
+  <li>Ms. Pratikshya Bhandari — Shinawatra University, Bangkok, Thailand</li>
+  <li>Mr. Sipnarong Kanchanawongpaisan — Shinawatra University, Thailand</li>
+  <li>Dr. Kanak Kalita — VSB–Technical University of Ostrava, Czech Republic</li>
+  <li>Dr. V. C. Deivayanai — Rajalakshmi Institute of Technology, Chennai, India</li>
+  <li>Dr. Babak Safaei — Eastern Mediterranean University, North Cyprus (Turkey)</li>
+  <li>Mr. Kaiss Redouane — Hassan 1st University, Settat, Morocco</li>
+  <li>Mr. Benjouid Zakaria — Hassan 1st University, Settat, Morocco</li>
+  <li>Mr. Dedy Panji Agustino — ITB STIKOM Bali, Indonesia</li>
+  <li>Mr. I Wayan Budi Sentana — Politeknik Negeri Bali, Indonesia</li>
+  <li>Mr. I Nyoman Kusuma Wardana — Politeknik Negeri Bali, Indonesia</li>
+  <li>Ms. Ni Kadek Dessy Hariyanti — Politeknik Negeri Bali, Indonesia</li>
+</ul>
 
     </div>
   </section>
