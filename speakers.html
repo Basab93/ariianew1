@@ -66,11 +66,12 @@
       border-color: rgba(13,110,253,.35); 
     }
     .speaker-photo {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      display: block;
-    }
+width: 100%;
+height: 260px;
+object-fit: contain;
+background: #111;
+padding: 8px;
+}
     .speaker-meta {
       padding: 1rem 1.1rem 1.25rem;
     }
@@ -150,6 +151,7 @@
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="tracks.html">Tracks</a></li>
       <li><a class="dropdown-item" href="speakers.html">Speakers</a></li>
+      <li><a class="dropdown-item" href="sessions.html">Special Sessions</a></li>
     </ul>
   </li>
 
@@ -191,77 +193,86 @@
   </header>
 
  
-  <section class="speakers-wrap">
-    <div class="container px-4 px-lg-5">
-      <div class="row align-items-start g-4 g-lg-5 mb-4">
-        <div class="col-lg-6">
-          <span class="speakers-kicker">Speakers</span>
-          <h2 class="speakers-title mt-3 display-5">
-            Keynote <span class="accent">Speakers</span>
-          </h2>
-        </div>
-        <div class="col-lg-6">
-          <p class="mb-0 text-secondary" style="color:rgba(255,255,255,.7)!important;">
-            Learn from some of the most forward-thinking voices in research and industry across intelligent systems and automation.
-          </p>
-        </div>
-      </div>
+  <div class="row g-grid">
 
-      <div class="row g-grid">
-        <!-- Card 1 -->
-       <div class="col-12 col-sm-6 col-lg-4">
-          <article class="speaker-card">
-            <img class="speaker-photo" src="assets/img/amit.jfif" alt="Portrait of Dr. Amit Dwivedi">
-            <div class="speaker-meta">
-              <h3 class="speaker-name">Dr. Amit Dwivedi</h3>
-              <p class="speaker-role">University of Warwick • UK</p>
-            </div>
-          </article>
-        </div>
+<!-- 1 -->
+<div class="col-12 col-sm-6 col-lg-4">
+<article class="speaker-card">
+<img class="speaker-photo" src="assets/img/Dr. Harikrishnan A.L. Ramiah.jpeg">
+<div class="speaker-meta">
+<h3 class="speaker-name">Dr. Harikrishnan Ramaiah</h3>
+<p class="speaker-role">Universiti Malaya • Malaysia</p>
+</div>
+</article>
+</div>
 
-        <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-lg-4">
-          <article class="speaker-card">
-            <img class="speaker-photo" src="assets/img/lalit.jpeg" alt="Portrait of Dr. Lalit Garg">
-            <div class="speaker-meta">
-              <h3 class="speaker-name">Dr. Lalit Garg</h3>
-              <p class="speaker-role">University of Malta • Malta</p>
-            </div>
-          </article>
-        </div>
+<!-- 2 -->
+<div class="col-12 col-sm-6 col-lg-4">
+<article class="speaker-card">
+<img class="speaker-photo" src="assets/img/dr-sara-pic-tIuZaYLvxHfrFXxW.png">
+<div class="speaker-meta">
+<h3 class="speaker-name">Prof. Dr. Sara Ramzani</h3>
+<p class="speaker-role">VP, GISMA Univ. of Applied Sciences • Germany</p>
+</div>
+</article>
+</div>
 
-        <!-- Card 3 -->
-        <div class="col-12 col-sm-6 col-lg-4">
-          <article class="speaker-card">
-            <img class="speaker-photo" src="assets/img/Mayukh Das.jpeg" alt="Portrait of Mayukh Das S">
-            <div class="speaker-meta">
-              <h3 class="speaker-name">Mayukh Das S</h3>
-              <p class="speaker-role">Microsoft • India</p>
-            </div>
-          </article>
-        </div>
+<!-- 3 -->
+<div class="col-12 col-sm-6 col-lg-4">
+<article class="speaker-card">
+<img class="speaker-photo" src="assets/img/Dr-Neyara-Radwan.png">
+<div class="speaker-meta">
+<h3 class="speaker-name">Dr. Neyara Radwan</h3>
+<p class="speaker-role">Liwa University • UAE | Suez Canal University • Egypt</p>
+</div>
+</article>
+</div>
 
-        <!-- Card 4 -->
-      <div class="col-12 col-sm-6 col-lg-4">
-          <article class="speaker-card">
-            <img class="speaker-photo" src="assets/img/Dr. Harikrishnan A.L. Ramiah.jpeg" alt="Portrait of Dr. Harikrishnan Ramaiah">
-            <div class="speaker-meta">
-              <h3 class="speaker-name">Dr. Harikrishnan Ramaiah</h3>
-              <p class="speaker-role">Universiti Malaya • Malaysia</p>
-            </div>
-          </article>
-        </div>
+<!-- 4 -->
+<div class="col-12 col-sm-6 col-lg-4">
+<article class="speaker-card">
+<img class="speaker-photo" src="assets/img/vally-pic-zSm45R9yiUxhPvd6.png">
+<div class="speaker-meta">
+<h3 class="speaker-name">Dr. Valliappan Raju</h3>
+<p class="speaker-role">Gisma University of Applied Sciences • Germany</p>
+</div>
+</article>
+</div>
 
-        <!-- Card 5 -->
-       <div class="col-12 col-sm-6 col-lg-4">
-          <article class="speaker-card">
-            <img class="speaker-photo" src="assets/img/ketan.png" alt="Portrait of Dr. Ketan Kotecha">
-            <div class="speaker-meta">
-              <h3 class="speaker-name">Dr. Ketan Kotecha</h3>
-              <p class="speaker-role">Symbiosis Institute of Technology • India</p>
-            </div>
-          </article>
-        </div>
+<!-- 5 -->
+<div class="col-12 col-sm-6 col-lg-4">
+<article class="speaker-card">
+<img class="speaker-photo" src="assets/img/lalit.jpeg">
+<div class="speaker-meta">
+<h3 class="speaker-name">Dr. Lalit Garg</h3>
+<p class="speaker-role">University of Malta • Malta</p>
+</div>
+</article>
+</div>
+
+<!-- 6 -->
+<div class="col-12 col-sm-6 col-lg-4">
+<article class="speaker-card">
+<img class="speaker-photo" src="assets/img/ketan.png">
+<div class="speaker-meta">
+<h3 class="speaker-name">Dr. Ketan Kotecha</h3>
+<p class="speaker-role">Symbiosis Institute of Technology • India</p>
+</div>
+</article>
+</div>
+
+<!-- 7 -->
+<div class="col-12 col-sm-6 col-lg-4">
+<article class="speaker-card">
+<img class="speaker-photo" src="assets/img/Mayukh Das.jpeg">
+<div class="speaker-meta">
+<h3 class="speaker-name">Mayukh Das S</h3>
+<p class="speaker-role">Microsoft • India</p>
+</div>
+</article>
+</div>
+
+</div>
 
     
   <!-- Footer -->
