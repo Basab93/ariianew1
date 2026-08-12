@@ -412,6 +412,137 @@ label {
 
 }
 
+/* ========================================= */
+/* MOBILE RESPONSIVE DESIGN */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container-fluid {
+        padding: 15px 10px !important;
+    }
+
+    .text-center h2 {
+        font-size: 22px;
+    }
+
+    .text-center p {
+        font-size: 14px;
+    }
+
+    /* Stack certificate and controls */
+
+    .generator-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    .generator-preview {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    /* Scale certificate to fit phone */
+
+    .generator-preview .certificate {
+        width: 794px !important;
+        height: 1040px !important;
+
+        transform: scale(
+            calc((100vw - 20px) / 794)
+        );
+
+        transform-origin: top center;
+
+        flex-shrink: 0;
+
+        margin-bottom:
+            calc(
+                -1040px +
+                ((100vw - 20px) / 794) * 1040px
+            );
+    }
+
+    /* Controls */
+
+    .generator-controls {
+        width: 100% !important;
+        max-width: 500px !important;
+        padding: 0 5px;
+    }
+
+    .generator-controls .card {
+        width: 100%;
+    }
+
+    .generator-controls .card-header {
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    .generator-controls .card-body {
+        padding: 18px;
+    }
+
+    .generator-controls label {
+        font-size: 14px;
+    }
+
+    .generator-controls .form-control,
+    .generator-controls .form-select {
+        height: 48px;
+        font-size: 15px;
+    }
+
+    .generator-controls .btn {
+        height: 50px;
+        font-size: 15px;
+    }
+
+}
+
+
+/* ========================================= */
+/* VERY SMALL PHONES */
+/* ========================================= */
+
+@media (max-width: 400px) {
+
+    .container-fluid {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .text-center h2 {
+        font-size: 20px;
+    }
+
+    .generator-preview .certificate {
+        transform: scale(
+            calc((100vw - 10px) / 794)
+        );
+
+        margin-bottom:
+            calc(
+                -1040px +
+                ((100vw - 10px) / 794px) * 1040px
+            );
+    }
+
+    .generator-controls {
+        padding: 0 2px;
+    }
+
+}
+
 </style>
 
 </head>
