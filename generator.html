@@ -48,13 +48,11 @@ h2 {
 /* ============================= */
 
 .certificate {
-    width: 794px;
-    height: 1040px;
-    background: #fff;
-    overflow: hidden;
     position: relative;
-    border-radius: 18px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, .18);
+    background-image: url("assets/logos/background.jpeg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 882px;
 }
 
 /* ============================= */
@@ -75,16 +73,28 @@ h2 {
     object-fit: contain;
 }
 
+/* Make ARIIA logo larger */
+.top-bar img:first-child {
+    height: 75px;
+}
+
 /* ============================= */
 /* BLUE HEADER */
 /* ============================= */
 
+
 .blue-header {
     height: 265px;
-    background: linear-gradient(180deg, #2d6bab, #3f6ea5);
+
+    background: transparent;
+
     text-align: center;
+
     color: white;
+
     position: relative;
+
+    z-index: 2;
 }
 
 .blue-header h1 {
@@ -109,13 +119,13 @@ h2 {
 
 .certificate-body {
     position: relative;
-    height: 617px;
-    background: url("assets/logos/background.jpeg");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
+    height: 617px;
+
+    background: transparent;
+
+    z-index: 2;
+}
 /* ============================= */
 /* PHOTO */
 /* ============================= */
@@ -130,7 +140,7 @@ h2 {
     position: absolute;
 
     left: 50%;
-    top: 28px;
+    top: -60px;
 
     transform: translateX(-50%);
 
@@ -153,7 +163,7 @@ h2 {
 
     position: absolute;
 
-    top: 365px;
+    top: 280px;
 
     left: 50%;
 
@@ -189,7 +199,7 @@ h2 {
 
     position: absolute;
 
-    top: 425px;
+    top: 350px;
 
     left: 50%;
 
@@ -228,44 +238,52 @@ h2 {
     position: absolute;
 
     left: 0;
+
     width: 100%;
 
-    bottom: 18px;
+    bottom: 105px;
 
     text-align: center;
 
     color: white;
 
-    z-index: 10;
+    z-index: 20;
 }
 
 .date {
 
     font-size: 30px;
+
     font-weight: 800;
 
     line-height: 1.1;
+
 }
 
 .venue {
 
-    font-size: 20px;
+    font-size: 19px;
+
     line-height: 1.2;
 
-    margin-top: 6px;
+    margin-top: 5px;
+
 }
 
 .country {
 
     font-size: 18px;
+
     line-height: 1.1;
+
 }
 
 .website {
 
-    margin-top: 8px;
+    margin-top: -5px;
 
     font-size: 16px;
+
 }
 
 /* ============================= */
@@ -294,10 +312,13 @@ h2 {
 }
 
 .bottom-bar img {
-
     height: 52px;
-
     object-fit: contain;
+}
+
+/* Make WRU logo larger */
+.bottom-bar img:nth-child(3) {
+    height: 68px;
 }
 
 /* ============================= */
