@@ -678,100 +678,62 @@ placeholder="Enter your Access Code">
 
     <script>
 
-        const PASSWORD = "ARIIA2026KEY";
+    const PASSWORD = "ARIIA123";
 
-        /*
-        ---------------------------------------------
-        CHANGE THESE TWO VALUES
-        ---------------------------------------------
-        */
+    function verifyPassword() {
 
-        const REDIRECT_URL =
-            "https://credential-creator-lab.lovable.app";
+        const code = document.getElementById("password").value.trim();
 
-        /*
-        ---------------------------------------------
-        */
+        const message = document.getElementById("message");
 
-        async function verifyPassword() {
+        if (code === "") {
 
-    const code = document.getElementById("password").value.trim();
+            message.innerHTML = `
+                <div class="alert alert-danger">
+                    Please enter your access code.
+                </div>
+            `;
 
-    const message = document.getElementById("message");
-
-    if(code===""){
-
-        message.innerHTML=`
-        <div class="alert alert-danger">
-            Please enter your access code.
-        </div>`;
-
-        return;
-
-    }
-
-    try{
-
-        const response = await fetch(
-
-            "https://script.google.com/macros/s/AKfycbyeQ5pS52cC7H7nozoXfrxVo5ENJYUzD4pwh0Wemo-qL1W6fQBf2f2gceZkdc6s5Jrr/exec?action=verify&code="
-
-            + encodeURIComponent(code)
-
-        );
-
-        const result = await response.json();
-
-        if(result.success){
-
-            sessionStorage.setItem("certificateAccess","true");
-
-            sessionStorage.setItem("speakerCode",code);
-
-            window.location.href="generator.html";
-
+            return;
         }
 
-        else{
+        // Temporary local verification
+        if (code === PASSWORD) {
 
-            message.innerHTML=`
-            <div class="alert alert-danger">
-                ${result.message}
-            </div>`;
+            sessionStorage.setItem("certificateAccess", "true");
+            sessionStorage.setItem("speakerCode", code);
+
+            // Go to generator
+            window.location.href = "generator.html";
+
+        } else {
+
+            message.innerHTML = `
+                <div class="alert alert-danger">
+                    Invalid access code.
+                </div>
+            `;
 
         }
 
     }
 
-    catch(err){
 
-        console.error(err);
+    /* Press Enter to continue */
 
-        message.innerHTML=`
-        <div class="alert alert-danger">
-            Unable to connect to server.
-        </div>`;
+    document
+        .getElementById("password")
+        .addEventListener("keypress", function (e) {
 
-    }
+            if (e.key === "Enter") {
 
-}
+                verifyPassword();
 
+            }
 
-        /* Press Enter to continue */
+        });
 
-        document
-            .getElementById("password")
-            .addEventListener("keypress", function (e) {
-
-                if (e.key === "Enter") {
-
-                    verifyPassword();
-
-                }
-
-            });
-
-    </script>
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
