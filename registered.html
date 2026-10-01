@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Registered Participants | ARIIA 2026</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <style>
+    header.masthead {
+      height: 40vh;
+      min-height: 24rem;
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+                  url("assets/img/dsu1.png") center/cover no-repeat;
+      backdrop-filter: blur(2px);
+    }
+    header.masthead h1 {
+      font-size: 2.6rem;
+    }
+    @media (min-width: 992px) {
+      header.masthead h1 { font-size: 3.2rem; }
+    }
+     /* Dropdown fix (works without Bootstrap JS) */
+.navbar-nav .dropdown {
+  position: relative;
+}
+
+.navbar-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  padding: 10px 0;
+  min-width: 200px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
+    .reg-table thead th { background:#f4623a; color:#fff; border-color:#f4623a; white-space:nowrap; }
+  .reg-table td { vertical-align: middle; }
+  </style>
+</head>
+
+<body id="page-top">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="ARIIA Conference Home">
+        <img src="assets/img/logo-removebg-preview.png" alt="ARIIA" style="height:36px; width:auto;">
+        <span class="fw-semibold d-none d-sm-inline">ARIIA 2026</span>
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto my-2 my-lg-0">
+
+  <li class="nav-item">
+    <a class="nav-link" href="index.html#about">About</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="index.html#venue">Venue</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="committee.html">Committee</a>
+  </li>
+
+  <!-- Program -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#">Program</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="tracks.html">Tracks</a></li>
+      <li><a class="dropdown-item" href="speakers.html">Speakers</a></li>
+      <li><a class="dropdown-item" href="industry_talks.html">Industry Talks (Online)</a></li>
+      <li><a class="dropdown-item" href="sessions.html">Special Sessions</a></li>
+    </ul>
+  </li>
+
+  <!-- Authors -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#">Authors</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="submission.html">Submission</a></li>
+      <li><a class="dropdown-item" href="publication.html">Publication</a></li>
+      <li><a class="dropdown-item" href="register.html">Registration</a></li>
+      <li><a class="dropdown-item" href="registered.html">Registered Participants</a></li>
+    </ul>
+  </li>
+
+  <!-- Calls -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#">Calls</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="cfp.html">Call for Papers</a></li>
+      <li><a class="dropdown-item" href="session_proposal.html">Call for Special Sessions</a></li>
+      <li><a class="dropdown-item" href="reviewers.html">Call for Reviewers</a></li>
+    </ul>
+  </li>
+
+  <!-- More -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#">More</a>
+    <ul class="dropdown-menu">
+      <lio><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+      <li><a class="dropdown-item" href="index.html#portfolio">Gallery 2024</a></li>
+      <li><a class="dropdown-item" href="Sponsorship.html">Sponsorship</a></li>
+      <li><a class="dropdown-item" href="startup.html">Startup Showcase</a></li>
+      <li><a class="dropdown-item" href="index.html#contact">Contact</a></li>
+    </ul>
+  </li>
+
+</ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead text-center text-white d-flex align-items-center justify-content-center">
+    <div class="container px-4 px-lg-5">
+      <h1 class="fw-bold text-uppercase mb-2">Registered Participants</h1>
+      <p class="text-white-75 m-0">Papers registered for ARIIA 2026</p>
+    </div>
+  </header>
+
+  <!-- Registered Papers -->
+  <section class="page-section bg-light" id="registered">
+    <div class="container px-4 px-lg-5">
+      <div class="bg-white shadow-sm rounded-3 p-4 p-md-5 mx-auto" style="max-width: 1000px;">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+          <h3 class="fw-bold text-dark m-0"><i class="bi bi-people-fill text-primary me-2"></i>Registered Papers</h3>
+          <span class="badge bg-primary fs-6" id="regCount">105 papers</span>
+        </div>
+        <input type="search" id="regSearch" class="form-control mb-4" placeholder="Search by Paper ID or title&hellip;" aria-label="Search registered papers">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover reg-table mb-0">
+            <thead>
+              <tr><th class="text-center" style="width:70px;">S. No.</th><th class="text-center" style="width:100px;">Paper ID</th><th>Paper Title</th></tr>
+            </thead>
+            <tbody id="regBody">
+            <tr><td class="text-center">1</td><td class="text-center fw-semibold">5</td><td>AURA: Automated Universal Recommendation and Assistance Framework for E-Governance</td></tr>
+            <tr><td class="text-center">2</td><td class="text-center fw-semibold">15</td><td>Challenges of Data Privacy in IoT-Driven Telemedicine</td></tr>
+            <tr><td class="text-center">3</td><td class="text-center fw-semibold">20</td><td>Design and Power Analysis of a Low-Power Dual-Output XOR–XNOR Logic Circuit for VLSI Applications</td></tr>
+            <tr><td class="text-center">4</td><td class="text-center fw-semibold">33</td><td>ProctorX: An Agentic AI Framework for Real-Time Examination Invigilation Using YOLO26 and Behavioural Analysis</td></tr>
+            <tr><td class="text-center">5</td><td class="text-center fw-semibold">55</td><td>Information System Technology for Supporting Smart Cities Sustainable to Protect Human Health</td></tr>
+            <tr><td class="text-center">6</td><td class="text-center fw-semibold">57</td><td>The Machine Learning for Anticipated Prognostic Systems in ICU</td></tr>
+            <tr><td class="text-center">7</td><td class="text-center fw-semibold">72</td><td>Timing Performance Analysis of Full Adders Using Multiplexer, Decoder, and Cascaded Half-Adder Structures</td></tr>
+            <tr><td class="text-center">8</td><td class="text-center fw-semibold">79</td><td>A Case Study of Systems Engineering Approach to Biomedical System</td></tr>
+            <tr><td class="text-center">9</td><td class="text-center fw-semibold">81</td><td>Explainable AI Framework for Predicting Academic Risk Using Sleep and Behavioral Patterns</td></tr>
+            <tr><td class="text-center">10</td><td class="text-center fw-semibold">83</td><td>The Impact of Standalone Virtual Reality Applications on Turbofan Engine Dynamics Learning in Aerospace Engineering Education</td></tr>
+            <tr><td class="text-center">11</td><td class="text-center fw-semibold">99</td><td>ASIRAF: Automated Smart Irrigation System Using IoT Sensors</td></tr>
+            <tr><td class="text-center">12</td><td class="text-center fw-semibold">102</td><td>Markerless Hand Rehabilitation using VR: A Clinically Aligned Home-Based Approach to Motor Recovery</td></tr>
+            <tr><td class="text-center">13</td><td class="text-center fw-semibold">105</td><td>CardioNarrate: Hybrid NLP and ECG Intelligence for Early Arrhythmia Prediction</td></tr>
+            <tr><td class="text-center">14</td><td class="text-center fw-semibold">112</td><td>SOFTWARE ERRORS, PRODUCT FUNCTIONALITY, AND ORGANIZATIONAL CASCADES: EVIDENCE FROM DEVELOPER-LIVED EXPERIENCE</td></tr>
+            <tr><td class="text-center">15</td><td class="text-center fw-semibold">114</td><td>Cimparitive analysis of deep learning based approach for featal alcohol spectrum disorder</td></tr>
+            <tr><td class="text-center">16</td><td class="text-center fw-semibold">115</td><td>An Efficient Transformer–Graph Learning Framework for Early Detection of Diabetic Retinopathy in Real-Time Systems</td></tr>
+            <tr><td class="text-center">17</td><td class="text-center fw-semibold">116</td><td>Brain Tumor Detection, Classification, and Treatment: A Comprehensive Review of Current Approaches, Clinical Data, and Emerging Trends</td></tr>
+            <tr><td class="text-center">18</td><td class="text-center fw-semibold">117</td><td>A Multi-Split Validated Hybrid Machine Learning Framework for Cardiovascular Disease Prediction</td></tr>
+            <tr><td class="text-center">19</td><td class="text-center fw-semibold">120</td><td>Physics-Informed Autoencoders for Trustworthy Fault Diagnosis in Smart Manufacturing</td></tr>
+            <tr><td class="text-center">20</td><td class="text-center fw-semibold">121</td><td>Risk-Aware Predictive Maintenance via Probabilistic RUL Estimation and Distributional Reinforcement Learning on Bearing Degradation Data</td></tr>
+            <tr><td class="text-center">21</td><td class="text-center fw-semibold">122</td><td>Digital Twin of a Gamer: A Counterfactual Simulation Framework for Personalized What-If Strategic Analysis in Competitive Gaming</td></tr>
+            <tr><td class="text-center">22</td><td class="text-center fw-semibold">127</td><td>Applying AI and ML Algorithms to Optimize Chess Strategies and Outcomes</td></tr>
+            <tr><td class="text-center">23</td><td class="text-center fw-semibold">141</td><td>Secure Federated Learning for Chronic Kidney Disease Prediction: A Critical Analysis of Current Frameworks and Future Directions</td></tr>
+            <tr><td class="text-center">24</td><td class="text-center fw-semibold">142</td><td>CAFÉ-DeepDetect: Compression-Aware Frequency and Embedding Fusion for Robust Deepfake Video Detection</td></tr>
+            <tr><td class="text-center">25</td><td class="text-center fw-semibold">144</td><td>Comparative Analysis of Deep Learning-Based Approaches for Fetal Alcohol Spectrum Disorder Detection</td></tr>
+            <tr><td class="text-center">26</td><td class="text-center fw-semibold">145</td><td>A conceptual framework for AI- and blockchain-enabled supply chain resilience optimization</td></tr>
+            <tr><td class="text-center">27</td><td class="text-center fw-semibold">147</td><td>Artificial intelligence and digital twin technologies for smart manufacturing and industrial optimization</td></tr>
+            <tr><td class="text-center">28</td><td class="text-center fw-semibold">148</td><td>Predictive maintenance using machine learning and the Industrial Internet of Things (IIoT): A conceptual framework</td></tr>
+            <tr><td class="text-center">29</td><td class="text-center fw-semibold">150</td><td>Beyond Disruptions: Industry 4.0-Driven Resilience in Modern Manufacturing</td></tr>
+            <tr><td class="text-center">30</td><td class="text-center fw-semibold">154</td><td>Lightweight Attention Mechanisms in Edge-Deployed CNNs for Automated Fruit Quality Grading</td></tr>
+            <tr><td class="text-center">31</td><td class="text-center fw-semibold">155</td><td>Explainable Machine Learning for Crop Failure Risk Prediction: A Socio-Environmental Hazard Perspective</td></tr>
+            <tr><td class="text-center">32</td><td class="text-center fw-semibold">158</td><td>Propagation Delay Analysis of Double-Tail Dynamic Latch and StrongARM Comparators for High-Speed Mixed-Signal Applications</td></tr>
+            <tr><td class="text-center">33</td><td class="text-center fw-semibold">161</td><td>Machine Learning–Based Prediction of Arsenic Concentration in Water Using a Low-Cost Portable Optical Sensor</td></tr>
+            <tr><td class="text-center">34</td><td class="text-center fw-semibold">163</td><td>Trustworthy Hybrid Quantum–Classical Graph Neural Framework with Continual Adaptation and Uncertainty-Aware Reasoning for Adaptive Cloud Intrusion Detection</td></tr>
+            <tr><td class="text-center">35</td><td class="text-center fw-semibold">164</td><td>Confidence-Driven Sequential Evidence Acquisition for Industrial Inspection.</td></tr>
+            <tr><td class="text-center">36</td><td class="text-center fw-semibold">166</td><td>GeoMemory+: A Terrain-Aware Framework for Historical Landscape Reconstruction Using Satellite Imagery, DEMs, and Generative AI</td></tr>
+            <tr><td class="text-center">37</td><td class="text-center fw-semibold">168</td><td>Employee adaptability in AI-enabled hospitality and tourism: A dynamic capability perspective on Human-AI orchestration and service value ambidexterity</td></tr>
+            <tr><td class="text-center">38</td><td class="text-center fw-semibold">172</td><td>AI-Driven Personalization in E-Commerce: A PLS-SEM Analysis of Customer Engagement and Purchase Behavior in the Industry 5.0 Era</td></tr>
+            <tr><td class="text-center">39</td><td class="text-center fw-semibold">175</td><td>How Entrepreneurship Education Builds Intention through Digital Competency and Self-Efficacy</td></tr>
+            <tr><td class="text-center">40</td><td class="text-center fw-semibold">177</td><td>Hybrid Transformer-Based Voice Question Answering System using Whisper, BERT, T5, and Phi-2 Models</td></tr>
+            <tr><td class="text-center">41</td><td class="text-center fw-semibold">182</td><td>INTELLIGENT TRAFFIC SIGNAL CONTROL FOR EMERGENCY VEHICLE PRIORITIZATION USING GPSASSISTED ETA PREDICTION AND LORA-BASED VEHICLE-TO-INFRASTRUCTURE COMMUNICATION</td></tr>
+            <tr><td class="text-center">42</td><td class="text-center fw-semibold">183</td><td>Transformer-Based Multi-Label Classification of Chest X-Ray Images for Disease Detection</td></tr>
+            <tr><td class="text-center">43</td><td class="text-center fw-semibold">187</td><td>Adversarial Identity Cloaking for Privacy-Preserving Facial Photo Protection</td></tr>
+            <tr><td class="text-center">44</td><td class="text-center fw-semibold">190</td><td>How Good Is the Data? A Transformer-Driven Audit of Medical Concept Normalization Datasets</td></tr>
+            <tr><td class="text-center">45</td><td class="text-center fw-semibold">191</td><td>Trust Formation in AI-Assisted Programming: Factors Shaping Developer Trust and Interaction with GitHub Copilot</td></tr>
+            <tr><td class="text-center">46</td><td class="text-center fw-semibold">192</td><td>Integrating AI-Generated Code into Professional Workflows: Challenges and Developer Strategies in GitHub Copilot-Assisted Python and SQL Development</td></tr>
+            <tr><td class="text-center">47</td><td class="text-center fw-semibold">197</td><td>DenseNet121–InceptionV3 Ensemble for Explainable Brain Tumor Classification Using Grad-CAM</td></tr>
+            <tr><td class="text-center">48</td><td class="text-center fw-semibold">207</td><td>Design and Performance Validation of Cost-Effective Teleoperated Master-Slave Robotic Arms</td></tr>
+            <tr><td class="text-center">49</td><td class="text-center fw-semibold">220</td><td>A Unified Multi-Modal System For Early Chronic Obstructive Pulmonary Disease Detection using AI</td></tr>
+            <tr><td class="text-center">50</td><td class="text-center fw-semibold">224</td><td>Communication Gated Multi-Agent Deep Reinforcement Learning for Scalable Congestion Control in 5G/6G Networks</td></tr>
+            <tr><td class="text-center">51</td><td class="text-center fw-semibold">226</td><td>Facilitating Conditions for Clinical AI Integration: Analyzing Training, Technical Support, and Organizational Resources Among Healthcare Professionals</td></tr>
+            <tr><td class="text-center">52</td><td class="text-center fw-semibold">233</td><td>Impact of AI-Based Investment Tools on Portfolio Performance: An Experimental Study</td></tr>
+            <tr><td class="text-center">53</td><td class="text-center fw-semibold">234</td><td>Experimental Study on Risk Assessment Models in Digital Finance</td></tr>
+            <tr><td class="text-center">54</td><td class="text-center fw-semibold">235</td><td>FinTech Innovations and Their Impact on Traditional Banking Systems</td></tr>
+            <tr><td class="text-center">55</td><td class="text-center fw-semibold">236</td><td>Impact of Organisational Culture on Digital Transformation Success</td></tr>
+            <tr><td class="text-center">56</td><td class="text-center fw-semibold">237</td><td>Talent Analytics and Workforce Optimisation: Implications for Organisational Performance</td></tr>
+            <tr><td class="text-center">57</td><td class="text-center fw-semibold">239</td><td>Thyroid Malignancy Prediction: A Multi-Dataset Study and Comparison</td></tr>
+            <tr><td class="text-center">58</td><td class="text-center fw-semibold">240</td><td>Impact of ADC Resolution on Sensor Accuracy in Microcontroller-Based Embedded Systems</td></tr>
+            <tr><td class="text-center">59</td><td class="text-center fw-semibold">241</td><td>Privacy-Preserving Machine Learning for Engineering Education Analytics Methods and Challenges</td></tr>
+            <tr><td class="text-center">60</td><td class="text-center fw-semibold">242</td><td>AI-Driven NLP Techniques for Cyber Threat Detection in IoT Networks</td></tr>
+            <tr><td class="text-center">61</td><td class="text-center fw-semibold">243</td><td>AI-Driven Intelligent Resource Allocation for 6G Wireless and Mobile Networks Using Deep Reinforcement Learning</td></tr>
+            <tr><td class="text-center">62</td><td class="text-center fw-semibold">244</td><td>Machine Learning-Based Energy-Efficient Routing Protocol for Wireless Sensor Networks</td></tr>
+            <tr><td class="text-center">63</td><td class="text-center fw-semibold">245</td><td>AI-Enabled IoT Solutions for Safe and Connected Learning Environments for Women</td></tr>
+            <tr><td class="text-center">64</td><td class="text-center fw-semibold">246</td><td>AI and Machine Learning Approaches for Secure Digital Transformation</td></tr>
+            <tr><td class="text-center">65</td><td class="text-center fw-semibold">247</td><td>Multi-Objective Adaptive MPC for Energy-Efficient EV Longitudinal Control Using pNEUMA Trajectories</td></tr>
+            <tr><td class="text-center">66</td><td class="text-center fw-semibold">249</td><td>Robust Multimodal Deepfake Detection System using Deep Learning</td></tr>
+            <tr><td class="text-center">67</td><td class="text-center fw-semibold">252</td><td>Rethinking Synthetic Oversampling in AI-Driven Insurance Fraud Detection: Threshold Shifts, Not Ranking Gains, for Intelligent Financial Systems in the Industry 5.0 Era</td></tr>
+            <tr><td class="text-center">68</td><td class="text-center fw-semibold">254</td><td>Why Would We Commercialise Our Science?” A Qualitative Inquiry into Attitude, Creative Motivation, and Research Commercialisation Intention among Private University Lecturers in the Industry 5.0 Era</td></tr>
+            <tr><td class="text-center">69</td><td class="text-center fw-semibold">255</td><td>From Attitude to Action in the Industry 5.0 Era: The Mediating Role of Creative Motivation in Shaping Research Commercialisation Intention among Private University Lecturers</td></tr>
+            <tr><td class="text-center">70</td><td class="text-center fw-semibold">256</td><td>DeepPAD: Deep Learning-Based Presentation Attack Detection in Face Recognition Systems</td></tr>
+            <tr><td class="text-center">71</td><td class="text-center fw-semibold">258</td><td>Development of a Robust Feature Extraction Framework for Soil Classification Using Hyperspectral Remote Sensing Data</td></tr>
+            <tr><td class="text-center">72</td><td class="text-center fw-semibold">259</td><td>Trustworthy Evaluation of AI-Driven Forecasting in Digital Energy Commerce: Machine Learning Does Not Beat the Random Walk for Price Direction</td></tr>
+            <tr><td class="text-center">73</td><td class="text-center fw-semibold">260</td><td>Artificial Intelligence-Driven Big Data Analytics and Machine Learning for Strategic Human Resource Management</td></tr>
+            <tr><td class="text-center">74</td><td class="text-center fw-semibold">261</td><td>Big Data Analytics, Data Mining, and Machine Learning for Financial Risk Prediction and Fraud Detection</td></tr>
+            <tr><td class="text-center">75</td><td class="text-center fw-semibold">262</td><td>A Secure and Privacy-Preserving Big Data Analytics Framework Integrating Data Mining and Machine Learning</td></tr>
+            <tr><td class="text-center">76</td><td class="text-center fw-semibold">267</td><td>Hybrid Big Data Analytics and Machine Learning Models for Advanced Data Mining Applications</td></tr>
+            <tr><td class="text-center">77</td><td class="text-center fw-semibold">268</td><td>Machine Learning-Based Competency Mapping and Talent Management Using Big Data</td></tr>
+            <tr><td class="text-center">78</td><td class="text-center fw-semibold">269</td><td>Explainable AI for Intelligent Network Management in Internet of Things Ecosystems</td></tr>
+            <tr><td class="text-center">79</td><td class="text-center fw-semibold">277</td><td>MIDAS: A Modular Autonomous Mobile Humanoid Robotic Platform for Intelligent Maintenance in Structured Indoor Environments</td></tr>
+            <tr><td class="text-center">80</td><td class="text-center fw-semibold">280</td><td>Federated-Learning and Explainable-AI-Enabled Smart Mask with Multi-Vital Sensor Fusion for Contactless Health Monitoring</td></tr>
+            <tr><td class="text-center">81</td><td class="text-center fw-semibold">283</td><td>A Robust Preprocessing Framework for Kidney Cancer Histopathology Images Using Tissue Masking and Stain Normalization</td></tr>
+            <tr><td class="text-center">82</td><td class="text-center fw-semibold">289</td><td>An Explainable Privacy-Preserving Multimodal Emotion Analysis Framework Using CNN-Based Facial Recognition and Large Language Models</td></tr>
+            <tr><td class="text-center">83</td><td class="text-center fw-semibold">291</td><td>Gauge-canonical inputs for neural-accelerated SCFT</td></tr>
+            <tr><td class="text-center">84</td><td class="text-center fw-semibold">292</td><td>Conversational AI in Travel: A LangGraph-Powered Agent Architecture</td></tr>
+            <tr><td class="text-center">85</td><td class="text-center fw-semibold">293</td><td>Customer Experience Research in the Industry 5.0 Era: From Experiential Consumption to Human-Centric Technology-Mediated Experience</td></tr>
+            <tr><td class="text-center">86</td><td class="text-center fw-semibold">295</td><td>Leakage-Aware IMU-Based Human Posture Recognition with Block-Wise Evaluation and a Simulated Flex-Sensor Probe</td></tr>
+            <tr><td class="text-center">87</td><td class="text-center fw-semibold">298</td><td>Intelligent Digital Education Services in the Industry 5.0 Era: The Role of AI-Driven ESG in Fostering Student Loyalty</td></tr>
+            <tr><td class="text-center">88</td><td class="text-center fw-semibold">302</td><td>Comparative Performance Analysis of Machine Learning and Deep Learning Architectures for Battery Fault Classification</td></tr>
+            <tr><td class="text-center">89</td><td class="text-center fw-semibold">307</td><td>Preventing Fatigue-Induced Road Accidents Through Lighting-Independent Physiological Monitoring and Latency-Bounded Autonomous Emergency Response</td></tr>
+            <tr><td class="text-center">90</td><td class="text-center fw-semibold">308</td><td>Human-Centric AI Integration in E-Commerce Warehouse Management: A Qualitative Exploration of Industry 5.0 Implementation</td></tr>
+            <tr><td class="text-center">91</td><td class="text-center fw-semibold">313</td><td>Instruction-Heldout Adaptation of a Medical Vision–Language–Action Model for Robotic Ultrasound Probe Trajectory Prediction</td></tr>
+            <tr><td class="text-center">92</td><td class="text-center fw-semibold">318</td><td>Portable EMG Monitoring and Visualization Device</td></tr>
+            <tr><td class="text-center">93</td><td class="text-center fw-semibold">321</td><td>Fusing Statistical Features and Multi-Scale DGCNN Embeddings for Robust EEG Emotion Recognition</td></tr>
+            <tr><td class="text-center">94</td><td class="text-center fw-semibold">322</td><td>A Color-Safe and Blur-Free Image Enhancement Framework Using Edge-Preserving Filtering and Detail Retention</td></tr>
+            <tr><td class="text-center">95</td><td class="text-center fw-semibold">324</td><td>AGENTIC AI AND CONSUMER AUTONOMY: EXAMINING SELF-DETERMINATION AND REACTANCE THEORIES FOR DIGITAL MARKETING ECOSYSTEMS</td></tr>
+            <tr><td class="text-center">96</td><td class="text-center fw-semibold">333</td><td>Smart Self-Defense Shoe: A Piezoelectric Energy Harvesting Wearable System for Women’s Safety</td></tr>
+            <tr><td class="text-center">97</td><td class="text-center fw-semibold">336</td><td>Sustainable Smart Mobility through Carbon-Aware Fuel Consumption Prediction Using Explainable Digital Twin-Assisted XGBoost–LightGBM–Transformer Fusion Networks</td></tr>
+            <tr><td class="text-center">98</td><td class="text-center fw-semibold">337</td><td>Cyber-Physical Security and Privacy-Aware Digital Twin Framework for Resilient Critical Urban Water Infrastructure</td></tr>
+            <tr><td class="text-center">99</td><td class="text-center fw-semibold">339</td><td>Renewable energy prediction using Genetic algorithm based feature selection and deep learning approach</td></tr>
+            <tr><td class="text-center">100</td><td class="text-center fw-semibold">345</td><td>A Systems Engineering Framework Integrating Artificial Intelligence, Digital Twins, and Digital Thread for Intelligent Mechanical Product Development and Manufacturing Resilience</td></tr>
+            <tr><td class="text-center">101</td><td class="text-center fw-semibold">349</td><td>Evaluating the Efficacy of Circular Economy Practices in the Indian Electric Vehicle Battery Ecosystem</td></tr>
+            <tr><td class="text-center">102</td><td class="text-center fw-semibold">351</td><td>Cultural Bridging Strategy and Organizational Integration of Vietnamese Workers in Technology MNEs: The Moderating Role of Superior Support in Industry 5.0</td></tr>
+            <tr><td class="text-center">103</td><td class="text-center fw-semibold">352</td><td>Cultural Bridging Strategies and Vietnamese Workers&#x27; Intentions to Quit Jobs in Tech MNEs in Industry 5.0: The Mediating Role of Organizational Inclusion.</td></tr>
+            <tr><td class="text-center">104</td><td class="text-center fw-semibold">361</td><td>Advancing Online Proctoring: An Annotated Video Dataset for Malpractice Behaviour Analysis</td></tr>
+            <tr><td class="text-center">105</td><td class="text-center fw-semibold">372</td><td>Differential Strength and Quantum Compilation Cost in SPECK</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-muted small text-center mt-3 mb-0 d-none" id="regEmpty">No papers match your search.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('regSearch').addEventListener('input', function () {
+      var q = this.value.trim().toLowerCase(), shown = 0;
+      document.querySelectorAll('#regBody tr').forEach(function (tr) {
+        var match = !q || tr.textContent.toLowerCase().indexOf(q) !== -1;
+        tr.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      document.getElementById('regCount').textContent = shown + ' papers';
+      document.getElementById('regEmpty').classList.toggle('d-none', shown !== 0);
+    });
+  </script>
+
+
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container px-4 px-lg-5 text-center">
+      <small class="text-muted">© 2025- ARIIA AUgmented Reality, Intelligent Systems & Industrial Automation.</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
