@@ -852,6 +852,8 @@ label {
                 </button>
 
             </div>
+            
+
 
         </div>
 
@@ -1065,49 +1067,86 @@ label {
 // DOWNLOAD
 // ========================
 
+
+const LOGGING_URL = "https://script.google.com/macros/s/AKfycbxQmPovxpMWgjg9xSzifdKIbZTn-96WzzaBnZ7QXxvI74OfN8IHYG8xQupVaxXzjp8TEQ/exec";
+
 document
-    .getElementById("downloadBtn")
-    .addEventListener("click", async function () {
+  .getElementById("downloadBtn")
+  .addEventListener("click", async function () {
+    const btn = this;
+    btn.disabled = true;
+    btn.innerHTML = "Generating...";
 
-        const btn = this;
-
-        btn.disabled = true;
-        btn.innerHTML = "Generating...";
-
-        try {
-
-            // Generate certificate image
-            const canvas = await html2canvas(
-                document.getElementById("certificate"),
-                {
-                    scale: 4,
-                    useCORS: true,
-                    backgroundColor: null
-                }
-            );
-
-            // Create download link
-            const link = document.createElement("a");
-
-            link.download = "ARIIA_Certificate.png";
-
-            link.href = canvas.toDataURL("image/png");
-
-            // Automatically download
-            link.click();
-
-        } catch (err) {
-
-            console.error(err);
-
-            alert("Unable to generate certificate.");
-
+    try {
+      const canvas = await html2canvas(
+        document.getElementById("certificate"),
+        {
+          scale: 4,
+          useCORS: true,
+          backgroundColor: null
         }
+      );
 
-        btn.disabled = false;
-        btn.innerHTML = "Download Certificate";
+      const name = document
+        .getElementById("speakerName").value.trim();
 
-    });
+      const affiliation = document
+        .getElementById("speakerAffiliation").value.trim();
+
+      const category = document
+        .getElementById("committee").value;
+
+      if (!name || !affiliation) {
+        alert("Please enter your name and affiliation.");
+        return;
+      }
+
+      const accessCode =
+        sessionStorage.getItem("speakerCode") || "";
+
+      if (accessCode !== "ARIIA123") {
+        alert("Please return to the access page and enter the access code.");
+        window.location.href = "certificate.html";
+        return;
+      }
+
+      const downloadId = crypto.randomUUID();
+
+      // Send the record to Google Sheets
+      try {
+        await fetch(LOGGING_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=UTF-8"
+          },
+          body: JSON.stringify({
+            accessCode,
+            name,
+            affiliation,
+            category,
+            downloadId
+          })
+        });
+      } catch (error) {
+        console.error("Download logging failed:", error);
+      }
+
+      // Download the poster
+      const link = document.createElement("a");
+      link.download = "ARIIA_Certificate.png";
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+
+    } catch (error) {
+      console.error(error);
+      alert("Unable to generate the poster. Please try again.");
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = "Download Poster";
+    }
+  });
+
 
     </script>
 
